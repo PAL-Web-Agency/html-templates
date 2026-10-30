@@ -1,0 +1,18 @@
+# Bản lưu trang gốc dùng để tham khảo
+docs/
+
+# Template gốc, không public
+base-template/
+
+# File cấu hình AI / editor
+.claude/
+.agents/
+.commandcode/
+.vscode/
+AGENTS.md
+CLAUDE.md
+
+# Hệ thống
+.DS_Store
+Thumbs.db
+desktop.ini

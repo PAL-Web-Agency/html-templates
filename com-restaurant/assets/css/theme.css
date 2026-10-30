@@ -1,0 +1,942 @@
+/* ===== base ===== */
+/* ---------- Fonts (self-hosted; latin, latin-ext, vietnamese subsets) ---------- */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-italic-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-italic-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-italic-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/cormorant-garamond-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/inter-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/inter-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/inter-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/inter-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/inter-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/inter-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/inter-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/inter-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/inter-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/inter-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/inter-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/inter-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-italic-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-italic-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-italic-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Design tokens ---------- */
+:root {
+  --color-green: #2d5a27;
+  --color-green-dark: #1e3d1a;
+  --color-pink: #e8506a;
+  --color-pink-dark: #c93d55;
+  --color-cream: #fff8f0;
+  --color-gold: #c4973b;
+  --color-gold-light: #d4ac5a;
+  --color-black: #1a1a1a;
+  --color-black-soft: #2a2a2a;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-accent: "Cormorant Garamond", Georgia, serif;
+
+  --container-max: 1280px;
+  --container-gutter: 24px;
+
+  --ease-default: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+/* ---------- Bootstrap / Reboot overrides ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-black);
+  text-align: left;
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--color-pink);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  color: inherit;
+}
+
+p,
+ul,
+ol,
+address {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+img,
+svg,
+iframe {
+  display: block;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  padding-right: var(--container-gutter);
+  padding-left: var(--container-gutter);
+}
+
+/* ---------- Shared decorative patterns ---------- */
+.pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.pattern-tiles {
+  background-image:
+    linear-gradient(45deg, var(--color-pink) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-pink) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-green) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-green) 75%);
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-size: 20px 20px;
+  opacity: .08;
+}
+
+.pattern-diamonds {
+  background-image:
+    linear-gradient(45deg, currentColor 25%, transparent 25% 75%, currentColor 75%),
+    linear-gradient(45deg, currentColor 25%, transparent 25% 75%, currentColor 75%);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+  opacity: .03;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: .03;
+}
+
+.pattern-crosshatch {
+  background-image:
+    linear-gradient(45deg, currentColor 1px, transparent 1px),
+    linear-gradient(-45deg, currentColor 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: .03;
+}
+
+/* ---------- AOS custom animation (target: slide-up, 30px, .8s ease-out) ---------- */
+[data-aos="slide-up-30"] {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+}
+
+[data-aos="slide-up-30"].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+[data-aos="slide-left-30"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition-property: opacity, transform;
+}
+
+[data-aos="slide-left-30"].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Global keyframes ---------- */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, .2, 1);
+  }
+}
+
+/* ===== shared/footer ===== */
+.s-footer {
+  position: relative;
+  margin-top: auto;
+  overflow: hidden;
+  color: rgba(255, 248, 240, .8);
+  background-color: var(--color-green-dark);
+}
+
+.s-footer .pattern {
+  color: var(--color-cream);
+}
+
+.s-footer .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.s-footer .row {
+  margin-right: -24px;
+  margin-left: -24px;
+}
+
+.s-footer .footer-col {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.s-footer .footer-col + .footer-col {
+  margin-top: 48px;
+}
+
+.s-footer .brand {
+  gap: 16px;
+}
+
+.s-footer .brand-logo {
+  width: auto;
+  height: 56px;
+}
+
+.s-footer .brand-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-cream);
+}
+
+.s-footer .brand-tagline {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
+  color: var(--color-gold-light);
+}
+
+.s-footer .col-title {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+}
+
+.s-footer .contact {
+  margin: 0;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.625;
+}
+
+.s-footer .contact p {
+  margin: 0 0 8px;
+}
+
+.s-footer .contact .contact-phone {
+  margin: 12px 0 0;
+}
+
+.s-footer .contact-link,
+.s-footer .social-link,
+.s-footer .legal-link {
+  transition: color .15s var(--ease-default);
+}
+
+.s-footer .hours-line {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.625;
+}
+
+.s-footer .hours-time {
+  color: var(--color-gold-light);
+}
+
+.s-footer .social {
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.s-footer .social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.s-footer .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 32px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 248, 240, .5);
+  border-top: 1px solid rgba(255, 248, 240, .1);
+}
+
+.s-footer .bottom p {
+  margin: 0;
+}
+
+@media (hover: hover) {
+  .s-footer .contact-link:hover {
+    color: var(--color-cream);
+  }
+
+  .s-footer .social-link:hover {
+    color: var(--color-pink);
+  }
+
+  .s-footer .legal-link:hover {
+    color: rgba(255, 248, 240, .8);
+  }
+}
+
+@media (min-width: 640px) {
+  .s-footer .bottom {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .s-footer .footer-col + .footer-col {
+    margin-top: 0;
+  }
+}
+
+/* ===== shared/header ===== */
+.s-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(30, 61, 26, .95);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow .5s var(--ease-default);
+}
+
+.s-header.is-scrolled {
+  box-shadow: var(--shadow-lg);
+}
+
+.s-header .nav-bar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.s-header .logo {
+  gap: 12px;
+  transition: opacity .15s var(--ease-default);
+}
+
+.s-header .logo-img {
+  width: auto;
+  height: 40px;
+}
+
+.s-header .logo-text {
+  display: none;
+}
+
+.s-header .logo-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--color-cream);
+}
+
+.s-header .logo-tagline {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 16px;
+  color: var(--color-gold-light);
+}
+
+.s-header .nav-list {
+  display: none;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.s-header .nav-item-link {
+  position: relative;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 240, .8);
+  transition: color .3s var(--ease-default);
+}
+
+.s-header .nav-item-link.is-active {
+  color: var(--color-gold);
+}
+
+.s-header .nav-underline {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+.s-header .reserve-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-pink);
+  border-radius: 4px;
+  transition: color .3s var(--ease-default), background-color .3s var(--ease-default);
+}
+
+.s-header .menu-toggle {
+  padding: 8px;
+  color: var(--color-cream);
+}
+
+.s-header .menu-icon,
+.s-header-menu .menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile menu overlay */
+.s-header-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background-color: rgba(30, 61, 26, .98);
+  transform: translateX(-100%);
+  transition: transform .5s var(--ease-out);
+}
+
+.s-header-menu.is-open {
+  transform: translateX(0);
+}
+
+.s-header-menu .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  padding: 8px;
+  color: var(--color-cream);
+}
+
+.s-header-menu .menu-link {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--color-cream);
+  transition: color .3s var(--ease-default);
+}
+
+.s-header-menu .menu-reserve-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-pink);
+  border-radius: 4px;
+  transition: color .15s var(--ease-default), background-color .15s var(--ease-default);
+}
+
+@media (hover: hover) {
+  .s-header .logo:hover {
+    opacity: .8;
+  }
+
+  .s-header .nav-item-link:hover {
+    color: var(--color-cream);
+  }
+
+  .s-header .nav-item-link.is-active:hover {
+    color: var(--color-gold);
+  }
+
+  .s-header .reserve-btn:hover,
+  .s-header-menu .menu-reserve-btn:hover {
+    color: #fff;
+    background-color: var(--color-pink-dark);
+  }
+
+  .s-header-menu .menu-link:hover {
+    color: var(--color-gold);
+  }
+}
+
+@media (min-width: 640px) {
+  .s-header .logo-text {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .s-header .logo-img {
+    height: 48px;
+  }
+
+  .s-header .nav-list {
+    display: flex;
+  }
+
+  .s-header .menu-toggle,
+  .s-header-menu {
+    display: none;
+  }
+}
+
+/* ===== shared/page-hero ===== */
+.s-page-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  overflow: hidden;
+  background-color: var(--color-green-dark);
+}
+
+.s-page-hero .photo,
+.s-page-hero .shade,
+.s-page-hero .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.s-page-hero .photo {
+  z-index: 10;
+}
+
+.s-page-hero .photo-img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s-page-hero .pattern,
+.s-page-hero .shade {
+  z-index: 20;
+}
+
+.s-page-hero .shade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), transparent 50%, rgba(0, 0, 0, .4));
+}
+
+.s-page-hero .content {
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-page-hero .text {
+  width: 100%;
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 64px 24px 0;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .5), 0 1px 3px rgba(0, 0, 0, .3);
+}
+
+.s-page-hero .tag {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 4px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(232, 80, 106, .8);
+}
+
+.s-page-hero .title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.15;
+  color: var(--color-cream);
+  text-wrap: balance;
+}
+
+.s-page-hero .subtitle {
+  max-width: 672px;
+  margin: 16px auto 0;
+  font-family: var(--font-accent);
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.625;
+  color: var(--color-cream);
+}
+
+.s-page-hero .cta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--color-pink);
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 rgba(232, 80, 106, 0), 0 0 0 0 rgba(232, 80, 106, 0);
+  transition: all .3s var(--ease-default);
+}
+
+@media (hover: hover) {
+  .s-page-hero .cta:hover {
+    color: #fff;
+    background-color: var(--color-pink-dark);
+    box-shadow: 0 10px 15px -3px rgba(232, 80, 106, .2), 0 4px 6px -4px rgba(232, 80, 106, .2);
+  }
+}
+
+@media (min-width: 768px) {
+  .s-page-hero .tag {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .s-page-hero .title {
+    font-size: 48px;
+  }
+
+  .s-page-hero .subtitle {
+    font-size: 24px;
+  }
+
+  .s-page-hero .cta {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .s-page-hero .title {
+    font-size: 60px;
+  }
+}

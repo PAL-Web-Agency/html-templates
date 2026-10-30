@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="532" height="964" viewBox="0 0 532 964">
+  <rect width="532" height="964" fill="#fdf0d4"/>
+  <circle cx="266" cy="380" r="86" fill="#f0a30a" opacity=".55"/>
+  <path d="M106 640c0-96 72-160 160-160s160 64 160 160v34H106z" fill="#f0a30a" opacity=".55"/>
+  <text x="266" y="780" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="40" font-weight="700" fill="#7a4a1c">Ảnh khách hàng</text>
+  <text x="266" y="830" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="28" fill="#7a4a1c">(thay bằng ảnh thật)</text>
+</svg>

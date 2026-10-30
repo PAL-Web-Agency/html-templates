@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="50" viewBox="0 0 198 50">
+  <path d="M19 3C19 3 5 19.5 5 30a14 14 0 0 0 28 0C33 19.5 19 3 19 3z" fill="#0891b2"/>
+  <path d="M12.5 29.5a6.5 6.5 0 0 0 6.5 6.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M34 2l1.6 4.4L40 8l-4.4 1.6L34 14l-1.6-4.4L28 8l4.4-1.6z" fill="#22d3ee"/>
+  <text x="44" y="28" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="-0.3"><tspan fill="#0891b2">DL</tspan><tspan fill="#ffffff">Theme</tspan></text>
+  <text x="45" y="43" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="9.6" font-weight="500" fill="#ffffff">Dịch Vụ Vệ Sinh Đắk Lắk</text>
+</svg>
