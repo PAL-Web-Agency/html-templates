@@ -47,16 +47,16 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  --color-ink: #214442;
-  --color-ink-soft: #2c605d;
-  --color-ink-mid: #22524f;
-  --color-ink-deep: #04313f;
+  --color-ink: #442c21;
+  --color-ink-soft: #603c2c;
+  --color-ink-mid: #523122;
+  --color-ink-deep: #3a2418;
   --color-cream: #f4efe9;
   --color-white: #fff;
-  --color-muted: #d3dad9;
+  --color-muted: #dad5d3;
   --color-beige: #d8cfc4;
   --color-line: #d8cfc4;
-  --color-line-soft: rgba(33, 68, 66, .15);
+  --color-line-soft: rgba(68, 44, 33, .15);
 
   --font-display: "Marcellus", serif;
   --font-body: "Jost", sans-serif;
@@ -67,6 +67,12 @@
 
   --ease: cubic-bezier(.25, .46, .45, .94);
   --ease-out: cubic-bezier(0, 0, .2, 1);
+
+  /* Webflow interaction easings (Penner curves) */
+  --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+  --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+  --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+  --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
 }
 
 /* ---------- Bootstrap / Reboot overrides ---------- */
@@ -89,7 +95,7 @@ body {
 
 .page-wrapper {
   overflow-x: clip;
-  animation: page-fade .8s var(--ease) both;
+  animation: page-fade .5s linear both;
 }
 
 h1,
@@ -228,6 +234,7 @@ svg {
 
 .title-element-shape {
   width: 60px;
+  animation: spin 10s linear infinite;
 }
 
 .section-title-wrapper {
@@ -349,6 +356,18 @@ svg {
 }
 
 [data-aos="in-right"].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* Webflow "Grow In" preset: fade + scale .75 -> 1 */
+[data-aos="grow-in"] {
+  opacity: 0;
+  transform: scale(.75);
+  transition-property: opacity, transform;
+}
+
+[data-aos="grow-in"].aos-animate {
   opacity: 1;
   transform: none;
 }
@@ -509,6 +528,17 @@ svg {
   }
 }
 
+/* ===== shared/footer ===== */
+/* Footer links stay light on the dark background (the base a:hover reset would make them inherit the dark text color) */
+.footer-menu-text-link {
+  transition: color .3s ease;
+}
+
+.footer-menu-text-link:hover,
+.footer-menu-text-link:focus {
+  color: var(--color-white);
+}
+
 /* ===== shared/preloader ===== */
 .preloader {
   position: fixed;
@@ -521,7 +551,7 @@ svg {
   align-items: center;
   justify-content: center;
   background-color: var(--color-cream);
-  transition: opacity .55s var(--ease);
+  transition: opacity .3s linear;
 }
 
 .preloader.is-hidden {
@@ -534,18 +564,29 @@ svg {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 240px;
   height: 100%;
 }
 
 .preloader-logo-wrapper {
-  width: 200px;
-  height: 74.66px;
+  width: 240px;
 }
 
-.preloader-logo-wrapper svg {
+.preloader-logo {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  animation: preloader-logo-in 1s var(--ease-out) both;
 }
 
+@keyframes preloader-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

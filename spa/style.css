@@ -90,7 +90,7 @@
   background-color: var(--color-white);
   border: 1px solid rgba(50, 36, 117, .1);
   border-radius: 6px;
-  box-shadow: 0 18px 34px rgba(33, 68, 66, .1);
+  box-shadow: 0 18px 34px rgba(68, 44, 33, .1);
 }
 
 .navbar .dropdown-menu-text-link {
@@ -258,27 +258,35 @@
   }
 }
 
-/* ===== home-v1/01-hero ===== */
+/* ===== home/01-hero ===== */
+/* Webflow "Banner Ticker": each track wrapper moves -100% in 10s, linear, looping */
 @keyframes ticker-x {
   from {
     transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translate3d(-33.3333%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
-.banner-ticker-wrapper .track {
-  width: max-content;
-  animation: ticker-x 42s linear infinite;
+.banner-ticker-wrapper .inner-track-wrapper {
+  animation: ticker-x 10s linear infinite;
 }
 
-/* ===== home-v1/shared-buttons ===== */
+/* Mouse-driven banner layers (jQuery sets the transform every frame) */
+.banner-section .banner-image,
+.banner-section .banner-element-one,
+.banner-section .banner-element-two {
+  will-change: transform;
+}
+
+/* ===== home/shared-buttons ===== */
+/* Primary button: label rolls up, its copy rolls in from 250% below (500ms outQuart both ways) */
 .primary-button .primary-button-text-block {
   position: relative;
   transform: translate3d(0, 0, 0);
-  transition: transform .35s cubic-bezier(.215, .61, .355, 1);
+  transition: transform .5s var(--ease-out-quart);
 }
 
 .primary-button .primary-button-text-block.is-text-absolute {
@@ -294,68 +302,124 @@
   transform: translate3d(0, 0, 0);
 }
 
+/* Tertiary (round "check this service") button: 600ms ease both ways */
 .tertiary-button .tertiary-button-text {
   position: relative;
   z-index: 1;
-  transition: color .45s var(--ease);
+  transform: scale(1);
+  transition: color .6s ease, transform .6s ease;
 }
 
 .tertiary-button .tertiary-button-shape {
   opacity: 0;
   transform: scale(0);
-  transition: opacity .45s var(--ease), transform .45s var(--ease);
+  transition: opacity .6s ease, transform .6s ease;
 }
 
 .tertiary-button:hover .tertiary-button-shape {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(.7);
 }
 
 .tertiary-button:hover .tertiary-button-text {
   color: var(--color-ink);
+  transform: scale(.9);
 }
 
-/* ===== home-v1/05-choose-us ===== */
-.choose-us-image-wrapper .choose-us-typography {
+/* ===== home/05-choose-us ===== */
+/* Choose-us card hover (Webflow a-9 in / a-10 out) */
+.choose-us-single .choose-us-image-wrapper {
+  border-color: rgba(68, 44, 33, 0);
+  transition: border-color .6s var(--ease-out-circ);
+}
+
+.choose-us-single .choose-us-image {
+  transform: scale(1);
+  transition: transform .6s var(--ease-out-circ);
+}
+
+.choose-us-single .choose-us-typography {
   opacity: 0;
-  transition: opacity .4s var(--ease);
+  transition: opacity .3s var(--ease-in-out-circ);
 }
 
-.choose-us-image-wrapper .choose-us-shape {
+.choose-us-single .choose-us-shape {
   transform: scale(0);
-  transition: transform .55s var(--ease);
+  transition: transform .6s var(--ease-in-out-circ);
 }
 
-.choose-us-image-wrapper:hover .choose-us-typography {
+.choose-us-single .choose-us-name,
+.choose-us-single .choose-single-description,
+.choose-us-single .choose-us-button-wrapper {
+  transform: translate3d(0, 25px, 0);
+  transition: transform .6s var(--ease-in-out-circ);
+}
+
+.choose-us-single .choose-us-element {
+  transform: scale(0) rotate(180deg);
+  transition: transform .6s var(--ease-in-out-circ) .1s;
+}
+
+.choose-us-single:hover .choose-us-image-wrapper {
+  border-color: var(--color-ink);
+}
+
+.choose-us-single:hover .choose-us-image {
+  transform: scale(1.2);
+}
+
+.choose-us-single:hover .choose-us-typography {
   opacity: 1;
+  transition-duration: .6s;
 }
 
-.choose-us-image-wrapper:hover .choose-us-shape {
+.choose-us-single:hover .choose-us-shape {
   transform: scale(1);
 }
 
-.choose-us-image-wrapper .choose-us-element {
+.choose-us-single:hover .choose-us-name,
+.choose-us-single:hover .choose-single-description,
+.choose-us-single:hover .choose-us-button-wrapper {
+  transform: translate3d(0, 0, 0);
+}
+
+.choose-us-single:hover .choose-us-element {
+  transform: scale(1) rotate(0deg);
+}
+
+/* ===== home/12-instagram ===== */
+/* Instagram tile hover (Webflow a-3 in / a-4 out) */
+.instagram-single .gallery-background-shape {
   transform: scale(0);
-  transition: transform .5s var(--ease);
+  transition: transform .6s var(--ease-out-cubic);
 }
 
-.choose-us-image-wrapper:hover .choose-us-element {
+.instagram-single .instagram-image {
   transform: scale(1);
+  transition: transform .6s var(--ease-out-circ);
 }
 
-/* ===== home-v1/12-instagram ===== */
-.instagram-single .gallery-background-shape,
 .instagram-single .icon-wrap {
   transform: scale(0);
-  transition: transform .4s var(--ease);
+  transition: transform .6s var(--ease-out-circ);
 }
 
-.instagram-single:hover .gallery-background-shape,
+.instagram-single:hover .gallery-background-shape {
+  transform: scale(1);
+  transition-timing-function: var(--ease-in-out-circ);
+}
+
+.instagram-single:hover .instagram-image {
+  transform: scale(1.1);
+  transition-timing-function: linear;
+}
+
 .instagram-single:hover .icon-wrap {
   transform: scale(1);
+  transition-delay: .2s;
 }
 
-/* ===== home-v1/04-tranquility ===== */
+/* ===== home/04-tranquility ===== */
 .tranquility-content.is-closed .tranquility-tab-single {
   display: none;
 }
@@ -364,7 +428,7 @@
   cursor: pointer;
 }
 
-/* ===== home-v1/06-luxurious ===== */
+/* ===== home/06-luxurious ===== */
 .luxurious-place-typography-single {
   will-change: transform, opacity;
 }
@@ -379,7 +443,7 @@
   will-change: transform, opacity;
 }
 
-/* ===== home-v1/sliders ===== */
+/* ===== home/sliders ===== */
 .choose-us-slider-mask,
 .testimonial-slider-mask {
   display: flex;
@@ -398,22 +462,23 @@
   cursor: pointer;
 }
 
+/* Arrow hover: icon rolls up 250%, white copy rolls in (600ms ease both ways) */
 .choose-us-slider-arrow .choose-us-slider-arrow-icon,
 .choose-us-slider-arrow .choose-us-slider-arrow-white,
 .testimonial-slider-arrow .choose-us-slider-arrow-icon,
 .testimonial-slider-arrow .choose-us-slider-arrow-white {
-  transition: transform .45s var(--ease);
+  transition: transform .6s ease;
 }
 
 .choose-us-slider-arrow .choose-us-slider-arrow-white,
 .testimonial-slider-arrow .choose-us-slider-arrow-white {
   position: absolute;
-  transform: translateY(70px);
+  transform: translateY(250%);
 }
 
 .choose-us-slider-arrow:hover .choose-us-slider-arrow-icon,
 .testimonial-slider-arrow:hover .choose-us-slider-arrow-icon {
-  transform: translateY(-70px);
+  transform: translateY(-250%);
 }
 
 .choose-us-slider-arrow:hover .choose-us-slider-arrow-white,
@@ -428,7 +493,7 @@
   height: 9px;
   margin: 0 5px;
   cursor: pointer;
-  background-color: rgba(33, 68, 66, .25);
+  background-color: rgba(68, 44, 33, .25);
   border-radius: 50%;
   transition: background-color .3s var(--ease);
 }
@@ -438,32 +503,33 @@
   background-color: var(--color-ink);
 }
 
-/* ===== home-v1/02-about ===== */
+/* ===== home/02-about ===== */
+/* Stat arch hover (Webflow a-5 in / a-6 out): resting rules carry the "out" timing */
 .about-us-futures-single .about-us-futures-shape {
   transform: scale(1);
-  transition: transform .5s var(--ease);
+  transition: transform .6s var(--ease-in-out-circ);
 }
 
 .about-us-futures-single .about-us-futures-image {
   transform: scale(.99);
-  transition: transform .5s var(--ease);
+  transition: transform .6s var(--ease-in-out-circ);
 }
 
 .about-us-futures-single .about-us-futures-icon {
   opacity: 1;
   transform: scale(1);
-  transition: opacity .4s var(--ease), transform .4s var(--ease);
+  transition: opacity .6s var(--ease-out-circ), transform .6s var(--ease-out-circ);
 }
 
 .about-us-futures-single .about-us-futures-icon-white {
   opacity: 0;
   transform: scale(0);
-  transition: opacity .4s var(--ease), transform .4s var(--ease);
+  transition: opacity .6s var(--ease-out-circ), transform .6s var(--ease-out-circ);
 }
 
 .about-us-futures-single .about-us-futures-name,
 .about-us-futures-single .about-us-futures-number {
-  transition: color .4s var(--ease);
+  transition: color .6s var(--ease-in-out-circ);
 }
 
 .about-us-futures-single:hover .about-us-futures-shape {
@@ -482,11 +548,33 @@
 .about-us-futures-single:hover .about-us-futures-icon-white {
   opacity: 1;
   transform: scale(1);
+  transition-timing-function: var(--ease-in-out-circ);
+  transition-delay: .2s;
 }
 
 .about-us-futures-single:hover .about-us-futures-name,
 .about-us-futures-single:hover .about-us-futures-number {
   color: var(--color-white);
+}
+
+/* ===== home/03-services ===== */
+/* Cards are a plain list: no 200vh scroll area, no sticky stacking (unlike the original) */
+.services-section-hv1 .services-cards {
+  height: auto;
+}
+
+.services-section-hv1 .services-card-main {
+  position: static;
+}
+
+/* Service card image hover: zoom 1.1, 600ms inOutCirc both ways */
+.services-card-image-wrapper .services-card-image {
+  transform: scale(1);
+  transition: transform .6s var(--ease-in-out-circ);
+}
+
+.services-card-image-wrapper:hover .services-card-image {
+  transform: scale(1.1);
 }
 
 /* ===== about-us/03-history-timeline ===== */
@@ -530,7 +618,7 @@
   text-align: left;
   background-color: var(--color-white);
   border-radius: 8px;
-  box-shadow: 0 18px 40px rgba(33, 68, 66, .08);
+  box-shadow: 0 18px 40px rgba(68, 44, 33, .08);
 }
 
 .history-timeline-year {
@@ -604,25 +692,78 @@
   }
 }
 
-/* ===== shared/blog-post-card ===== */
-.blog-post-single .blog-post-shape,
-.blog-post-single .blog-post-image,
-.blog-post-single .blog-single-image._1 {
-  transition: transform .6s var(--ease);
+/* ===== about-us/09-gallery ===== */
+/* Same look as the original Instagram block; each tile is now a lightbox link */
+.s-about-gallery .instagram-single {
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: zoom-in;
 }
 
-.blog-post-single:hover .blog-post-shape {
+.s-about-gallery .icon-wrap {
+  font-family: inherit;
+}
+
+.s-about-gallery .about-gallery-icon {
+  display: block;
+}
+
+.s-about-gallery .instagram-single:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+/* Lightbox (Fancybox 3) in the site palette */
+.fancybox-bg {
+  background: var(--color-ink-deep);
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .92;
+}
+
+.fancybox-thumbs {
+  background: var(--color-ink-deep);
+}
+
+.fancybox-thumbs__list a::before {
+  border-color: var(--color-cream);
+}
+
+.fancybox-progress {
+  background: var(--color-cream);
+}
+
+.fancybox-caption {
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+/* ===== shared/blog-post-card ===== */
+/* Blog row hover (Webflow a-7 in / a-8 out), triggered by the left content */
+.blog-post-single .blog-post-shape {
+  transform: translateX(0);
+  transition: transform .6s var(--ease-in-out-circ);
+}
+
+.blog-post-single .blog-post-image,
+.blog-post-single .blog-single-image._1 {
+  transform: scale(1);
+  transition: transform .6s var(--ease-out-circ);
+}
+
+.blog-post-left-content:hover .blog-post-shape {
   transform: translateX(-101%);
 }
 
-.blog-post-single:hover .blog-post-image,
-.blog-post-single:hover .blog-single-image._1 {
+.blog-post-left-content:hover .blog-post-image,
+.blog-post-single:has(.blog-post-left-content:hover) .blog-single-image._1 {
   transform: scale(1.1);
 }
 
-/* ===== home-v1/disclosure (reduced motion) ===== */
+/* ===== home/disclosure (reduced motion) ===== */
 @media (prefers-reduced-motion: reduce) {
-  .banner-ticker-wrapper .track {
+  .banner-ticker-wrapper .inner-track-wrapper {
     animation: none;
   }
 }
