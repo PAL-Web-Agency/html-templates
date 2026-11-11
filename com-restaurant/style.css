@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  background-color: var(--color-green-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .s-hero .slide {
@@ -91,7 +91,7 @@
   letter-spacing: .3em;
   text-transform: uppercase;
   color: #fff;
-  background-color: rgba(232, 80, 106, .8);
+  background-color: rgba(168, 122, 40, .8);
 }
 
 .s-hero .title {
@@ -124,9 +124,9 @@
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
   border-radius: 4px;
-  box-shadow: 0 0 0 0 rgba(232, 80, 106, 0), 0 0 0 0 rgba(232, 80, 106, 0);
+  box-shadow: 0 0 0 0 rgba(168, 122, 40, 0), 0 0 0 0 rgba(168, 122, 40, 0);
   transition: all .3s var(--ease-default);
 }
 
@@ -172,8 +172,8 @@
 @media (hover: hover) {
   .s-hero .cta:hover {
     color: #fff;
-    background-color: var(--color-pink-dark);
-    box-shadow: 0 10px 15px -3px rgba(232, 80, 106, .2), 0 4px 6px -4px rgba(232, 80, 106, .2);
+    background-color: var(--color-accent-dark);
+    box-shadow: 0 10px 15px -3px rgba(168, 122, 40, .2), 0 4px 6px -4px rgba(168, 122, 40, .2);
   }
 
   .s-hero .dot:not(.is-active):hover {
@@ -216,7 +216,7 @@
 }
 
 .s-atmosphere .pattern {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-atmosphere .container {
@@ -230,14 +230,14 @@
   line-height: 20px;
   letter-spacing: .3em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-atmosphere .title {
   margin: 0 0 32px;
   font-size: 36px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-atmosphere .text {
@@ -268,7 +268,7 @@
   position: relative;
   padding: 64px 0;
   overflow: hidden;
-  background-color: var(--color-green-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .s-reviews .pattern {
@@ -381,7 +381,7 @@
 /* ===== home/04-features ===== */
 .s-features .divider {
   height: 1px;
-  background-image: linear-gradient(to right, transparent, rgba(232, 80, 106, .3), transparent);
+  background-image: linear-gradient(to right, transparent, rgba(168, 122, 40, .3), transparent);
 }
 
 .s-features .body {
@@ -392,7 +392,7 @@
 }
 
 .s-features .pattern {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-features .body .container {
@@ -431,7 +431,7 @@
   margin: 0 0 16px;
   font-size: 24px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-features .feature-text {
@@ -453,9 +453,9 @@
   line-height: 20px;
   letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--color-green);
+  color: var(--color-primary);
   background-color: transparent;
-  border: 2px solid var(--color-green);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
   transition: all .3s var(--ease-default);
 }
@@ -463,7 +463,7 @@
 @media (hover: hover) {
   .s-features .cta-link:hover {
     color: var(--color-cream);
-    background-color: var(--color-green);
+    background-color: var(--color-primary);
   }
 }
 
@@ -484,7 +484,7 @@
   align-items: center;
   min-height: 60vh;
   overflow: hidden;
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
 }
 
 .s-quartier .photo,
@@ -571,7 +571,7 @@
   position: sticky;
   top: 88px;
   z-index: 40;
-  background-color: rgba(30, 61, 26, .98);
+  background-color: rgba(58, 13, 20, .98);
   border-bottom: 1px solid rgba(255, 248, 240, .1);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
@@ -652,7 +652,7 @@
   bottom: 0;
   left: 0;
   height: 2px;
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
   border-radius: 9999px;
   transition: all .4s cubic-bezier(.22, 1, .36, 1);
 }
@@ -732,14 +732,14 @@
   line-height: 24px;
   letter-spacing: .25em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-carte-menu .panel-title {
   margin: 0;
   font-size: 36px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 /* Card grid (>= 768px) */
@@ -791,7 +791,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, var(--color-green-dark), var(--color-green));
+  background-image: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
 }
 
 .s-carte-menu .card-placeholder .pattern {
@@ -832,7 +832,7 @@
 
 .s-carte-menu .dish-badge-favorite,
 .s-carte-dish-modal .dish-badge-favorite {
-  background-color: rgba(232, 80, 106, .9);
+  background-color: rgba(168, 122, 40, .9);
 }
 
 .s-carte-menu .dish-badge-veggie,
@@ -855,11 +855,11 @@
   margin: 0;
   font-size: 20px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-carte-menu .dish-card.is-featured .card-name {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-carte-menu .card-price,
@@ -934,7 +934,7 @@
 }
 
 .s-carte-menu .row-icon-favorite {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-carte-menu .row-icon-veggie {
@@ -1019,7 +1019,7 @@
   padding: 56px 0;
   overflow: hidden;
   color: #fff;
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
 }
 
 .s-carte-cta .pattern {
@@ -1056,7 +1056,7 @@
   line-height: 20px;
   letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
   cursor: pointer;
   background-color: #fff;
   border-radius: 4px;
@@ -1065,7 +1065,7 @@
 
 @media (hover: hover) {
   .s-carte-cta .cta-btn:hover {
-    color: var(--color-pink);
+    color: var(--color-accent);
     background-color: var(--color-cream);
   }
 }
@@ -1170,7 +1170,7 @@
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background-image: linear-gradient(to bottom right, var(--color-green-dark), var(--color-green));
+  background-image: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
 }
 
 .s-carte-dish-modal .dish-media-img {
@@ -1236,11 +1236,11 @@
   margin: 0;
   font-size: 24px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-carte-dish-modal.is-featured .name {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-carte-dish-modal .price {
@@ -1268,7 +1268,7 @@
   line-height: 16px;
   letter-spacing: .05em;
   text-transform: uppercase;
-  color: rgba(232, 80, 106, .6);
+  color: rgba(168, 122, 40, .6);
 }
 
 .s-carte-dish-modal .tags:empty {
@@ -1320,7 +1320,7 @@ body.is-dish-open {
   height: 256px;
   margin: 0 auto;
   overflow: hidden;
-  border: 2px solid rgba(45, 90, 39, .2);
+  border: 2px solid rgba(110, 26, 38, .2);
   border-radius: 9999px;
 }
 
@@ -1340,7 +1340,7 @@ body.is-dish-open {
   line-height: 20px;
   letter-spacing: .3em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-histoire-chef .title,
@@ -1349,7 +1349,7 @@ body.is-dish-open {
   margin: 0 0 24px;
   font-size: 30px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-histoire-chef .text,
@@ -1391,7 +1391,7 @@ body.is-dish-open {
 
 .s-histoire-culture .divider {
   height: 1px;
-  background-image: linear-gradient(to right, transparent, rgba(232, 80, 106, .3), transparent);
+  background-image: linear-gradient(to right, transparent, rgba(168, 122, 40, .3), transparent);
 }
 
 .s-histoire-culture .body {
@@ -1418,7 +1418,7 @@ body.is-dish-open {
   padding: 80px 0;
   overflow: hidden;
   color: var(--color-cream);
-  background-color: var(--color-green-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .s-histoire-meaning .portrait-frame {
@@ -1453,7 +1453,7 @@ body.is-dish-open {
 }
 
 .s-events-intro .pattern {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-events-intro .container {
@@ -1467,14 +1467,14 @@ body.is-dish-open {
   line-height: 20px;
   letter-spacing: .3em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-events-intro .title {
   margin: 0 0 32px;
   font-size: 36px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-events-intro .text {
@@ -1497,7 +1497,7 @@ body.is-dish-open {
 /* ===== evenements/02-occasions ===== */
 .s-events-occasions .divider {
   height: 1px;
-  background-image: linear-gradient(to right, transparent, rgba(232, 80, 106, .3), transparent);
+  background-image: linear-gradient(to right, transparent, rgba(168, 122, 40, .3), transparent);
 }
 
 .s-events-occasions .body {
@@ -1508,7 +1508,7 @@ body.is-dish-open {
 }
 
 .s-events-occasions .pattern {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-events-occasions .body .container {
@@ -1547,7 +1547,7 @@ body.is-dish-open {
   margin: 0 0 16px;
   font-size: 24px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-events-occasions .occasion-text {
@@ -1573,11 +1573,11 @@ body.is-dish-open {
   padding: 80px 0;
   overflow: hidden;
   color: var(--color-cream);
-  background-color: var(--color-green-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .s-events-info .pattern {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-events-info .container {
@@ -1664,7 +1664,7 @@ body.is-dish-open {
   scroll-margin-top: 88px;
   overflow: hidden;
   color: var(--color-cream);
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
 }
 
 .s-events-request .pattern {
@@ -1820,7 +1820,7 @@ body.is-dish-open {
   line-height: 20px;
   letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
   cursor: pointer;
   background-color: #fff;
   border-radius: 4px;
@@ -1854,7 +1854,7 @@ body.is-dish-open {
 .s-events-request .spinner-icon {
   width: 20px;
   height: 20px;
-  color: var(--color-pink);
+  color: var(--color-accent);
   animation: events-spin 1s linear infinite;
 }
 
@@ -1946,7 +1946,7 @@ body.is-dish-open {
   }
 
   .s-events-request .success-link:hover {
-    color: var(--color-pink);
+    color: var(--color-accent);
     background-color: var(--color-cream);
   }
 }
@@ -1997,14 +1997,14 @@ body.is-dish-open {
   line-height: 20px;
   letter-spacing: .3em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .s-contact-details .title {
   margin: 0 0 24px;
   font-size: 30px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-contact-details .intro {
@@ -2053,14 +2053,14 @@ body.is-dish-open {
   height: 20px;
 }
 
-.s-contact-details .contact-icon-green {
-  color: var(--color-green);
-  background-color: rgba(45, 90, 39, .1);
+.s-contact-details .contact-icon-primary {
+  color: var(--color-primary);
+  background-color: rgba(110, 26, 38, .1);
 }
 
-.s-contact-details .contact-icon-pink {
-  color: var(--color-pink);
-  background-color: rgba(232, 80, 106, .1);
+.s-contact-details .contact-icon-accent {
+  color: var(--color-accent);
+  background-color: rgba(168, 122, 40, .1);
 }
 
 .s-contact-details .contact-icon-gold {
@@ -2072,7 +2072,7 @@ body.is-dish-open {
 .s-contact-details .contact-link {
   margin: 0;
   font-weight: 500;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-contact-details .contact-link {
@@ -2087,7 +2087,7 @@ body.is-dish-open {
 .s-contact-details .hours {
   padding: 32px;
   color: var(--color-cream);
-  background-color: var(--color-green-dark);
+  background-color: var(--color-primary-dark);
   border-radius: 8px;
 }
 
@@ -2135,7 +2135,7 @@ body.is-dish-open {
   margin: 0 0 16px;
   font-size: 24px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-contact-details .booking-text {
@@ -2155,19 +2155,19 @@ body.is-dish-open {
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
   border-radius: 4px;
   transition: color .3s var(--ease-default), background-color .3s var(--ease-default);
 }
 
 @media (hover: hover) {
   .s-contact-details .contact-link:hover {
-    color: var(--color-pink);
+    color: var(--color-accent);
   }
 
   .s-contact-details .booking-btn:hover {
     color: #fff;
-    background-color: var(--color-pink-dark);
+    background-color: var(--color-accent-dark);
   }
 }
 
@@ -2192,7 +2192,7 @@ body.is-dish-open {
 /* ===== contact/02-map ===== */
 .s-contact-map {
   height: 320px;
-  background-color: rgba(45, 90, 39, .1);
+  background-color: rgba(110, 26, 38, .1);
 }
 
 .s-contact-map .map-frame {
@@ -2219,14 +2219,14 @@ body.is-dish-open {
   height: 0;
   margin: 0;
   border: 0;
-  border-top: 1px solid rgba(45, 90, 39, .1);
+  border-top: 1px solid rgba(110, 26, 38, .1);
 }
 
 .s-legal-notice .block-title {
   margin: 0 0 16px;
   font-size: 24px;
   line-height: 1.15;
-  color: var(--color-green-dark);
+  color: var(--color-primary-dark);
 }
 
 .s-legal-notice .block-body {

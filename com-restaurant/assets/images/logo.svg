@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="DLRestaurant">
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#e0b866" stroke-width="2"/>
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="#e0b866" stroke-width="1" stroke-dasharray="1 3" opacity=".6"/>
+  <g fill="none" stroke="#fff8f0" stroke-width="1.8" stroke-linecap="round">
+    <path d="M24 26c-2-2.5 2-4.5 0-7.5"/>
+    <path d="M30 26c-2-2.5 2-4.5 0-7.5"/>
+  </g>
+  <g stroke="#e0b866" stroke-width="2.4" stroke-linecap="round">
+    <path d="M37 30l13-15"/>
+    <path d="M41 30l12-12"/>
+  </g>
+  <path d="M14 31h36a18 18 0 0 1-36 0z" fill="#fff8f0"/>
+  <rect x="24" y="49" width="16" height="3" rx="1.5" fill="#fff8f0"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="700" letter-spacing=".5" fill="#3a0d14">DL</text>
+</svg>

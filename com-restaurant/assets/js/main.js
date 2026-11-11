@@ -183,12 +183,13 @@
       AOS.refresh();
     });
 
-    // carte.html#drinks (or any part of a panel title) opens that tab
+    // carte.html#drinks (panel key or any part of a panel title) opens that tab
     if (window.location.hash) {
       var wanted = decodeURIComponent(window.location.hash.slice(1)).toLowerCase();
       $panels.each(function (index) {
         var title = $(this).find('.panel-title').text().toLowerCase();
-        if (index !== 0 && wanted && title.indexOf(wanted) !== -1) {
+        var key = String($(this).data('panel')).toLowerCase();
+        if (index !== 0 && wanted && (key === wanted || title.indexOf(wanted) !== -1)) {
           setTimeout(function () { show(index); }, 100);
           return false;
         }
@@ -262,7 +263,7 @@
     var $button = $root.find('.submit-btn');
     var $error = $root.find('.request-error');
     var $success = $root.find('.success');
-    var ERROR_TEXT = 'An error occurred. Please try again or call us on 07 61 30 47 10.';
+    var ERROR_TEXT = 'Đã có lỗi xảy ra. Vui lòng thử lại hoặc gọi cho chúng tôi theo số 0905 123 456.';
 
     function setLoading(loading) {
       $button.prop('disabled', loading).toggleClass('is-loading', loading);

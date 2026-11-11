@@ -37,25 +37,6 @@
   });
 })(jQuery);
 
-/* ===== shared/footer ===== */
-(function ($) {
-  'use strict';
-  $(function () {
-    var $root = $('.s-footer');
-    if (!$root.length) return;
-
-    $root.find('.s-footer__form').on('submit', function (e) {
-      e.preventDefault();
-      var $input = $(this).find('input');
-      if (!$input[0].checkValidity()) {
-        $input[0].reportValidity();
-        return;
-      }
-      $input.val('').attr('placeholder', 'Cảm ơn bạn đã đăng ký!');
-    });
-  });
-})(jQuery);
-
 /* ===== shared/header ===== */
 (function ($) {
   'use strict';
@@ -234,6 +215,98 @@
     });
 
     $form.find('[required]').on('input', function () {
+      $(this).removeClass('is-invalid');
+    });
+  });
+})(jQuery);
+
+/* ===== about/05-stats ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-about-stats');
+    if (!$root.length || !('IntersectionObserver' in window)) return;
+
+    // Count every number up from 0 once the band scrolls into view
+    var $nums = $root.find('.js-stat');
+    $nums.text('0');
+
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      $nums.each(function () {
+        var $num = $(this);
+        var target = parseInt($num.data('count'), 10) || 0;
+        $({ n: 0 }).animate({ n: target }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function (now) { $num.text(Math.round(now)); },
+          complete: function () { $num.text(target); }
+        });
+      });
+    }, { threshold: .4 });
+    io.observe($root[0]);
+  });
+})(jQuery);
+
+/* ===== chi-tiet-tin-tuc/02-article ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-post');
+    if (!$root.length) return;
+
+    // Static demo: validate the comment form and thank the visitor instead of posting
+    $root.find('.s-post__form').on('submit', function (e) {
+      e.preventDefault();
+      var $form = $(this);
+      var ok = true;
+      $form.find('[required]').each(function () {
+        var valid = this.checkValidity();
+        $(this).toggleClass('is-invalid', !valid);
+        if (!valid) ok = false;
+      });
+      if (!ok) {
+        $form.find('.s-post__notice').text('Vui lòng điền đầy đủ các trường bắt buộc.');
+        return;
+      }
+      $form.find('.s-post__notice').text('Cảm ơn bạn! Bình luận đang chờ duyệt.');
+      $form.find('.s-post__field').val('');
+    });
+
+    $root.find('.s-post__field').on('input', function () {
+      $(this).removeClass('is-invalid');
+    });
+  });
+})(jQuery);
+
+/* ===== contact/02-form ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-contact-page');
+    if (!$root.length) return;
+
+    // Static demo: validate required fields and thank the visitor instead of posting
+    $root.find('.s-contact-page__form').on('submit', function (e) {
+      e.preventDefault();
+      var $form = $(this);
+      var ok = true;
+      $form.find('[required]').each(function () {
+        var valid = this.checkValidity();
+        $(this).toggleClass('is-invalid', !valid);
+        if (!valid) ok = false;
+      });
+      var $notice = $form.find('.s-contact-page__notice');
+      if (!ok) {
+        $notice.text('Vui lòng điền đầy đủ các trường bắt buộc.');
+        return;
+      }
+      $notice.text('Cảm ơn bạn! DLTheme sẽ liên hệ lại trong thời gian sớm nhất.');
+      $form.find('.s-contact-page__field').val('');
+    });
+
+    $root.find('.s-contact-page__field').on('input', function () {
       $(this).removeClass('is-invalid');
     });
   });
