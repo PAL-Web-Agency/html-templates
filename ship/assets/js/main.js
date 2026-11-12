@@ -183,7 +183,9 @@
       return;
     }
 
-    var $modal = $root.find('#hero-video-modal');
+    // .s-hero has z-index: 1 (its own stacking context), which would trap the
+    // modal below Bootstrap's body-level backdrop — move it out to <body>
+    var $modal = $root.find('#hero-video-modal').appendTo('body');
     var $frame = $modal.find('iframe');
 
     $root.on('click', '.s-hero__play', function () {
