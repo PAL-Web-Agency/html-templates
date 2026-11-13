@@ -6,6 +6,33 @@
   });
 })(jQuery);
 
+/* ===== shared/back-to-top ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-back-to-top');
+    if (!$root.length) return;
+
+    var $win = $(window);
+
+    function onScroll() {
+      $root.toggleClass('is-visible', $win.scrollTop() > 400);
+    }
+
+    onScroll();
+    $win.on('scroll', onScroll);
+
+    // Scroll the window itself (the fixed header can't be an anchor target)
+    $root.on('click', function () {
+      try {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+    });
+  });
+})(jQuery);
+
 /* ===== shared/footer ===== */
 (function ($) {
   'use strict';
@@ -113,6 +140,21 @@
       var page = $select.data('target-page') || $form.attr('action');
       var hash = $select.val();
       window.location.href = page + (hash ? '#' + hash : '');
+    });
+  });
+})(jQuery);
+
+/* ===== home/10-testimonials ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-testimonials');
+    if (!$root.length) return;
+
+    // Duplicate each track so translateY(-50%) loops without a jump
+    $root.find('.testimonial-track').each(function () {
+      var $track = $(this);
+      $track.children().clone().attr('aria-hidden', 'true').appendTo($track);
     });
   });
 })(jQuery);
@@ -233,6 +275,69 @@
     // Demo template: article links have no detail page yet
     $root.on('click', 'a[href="#"]', function (event) {
       event.preventDefault();
+    });
+  });
+})(jQuery);
+
+/* ===== chi-tiet-tin-tuc/01-article ===== */
+(function ($) {
+  'use strict';
+  $(function () {
+    var $root = $('.s-article');
+    if (!$root.length) return;
+
+    var $win = $(window);
+    var $content = $root.find('.article-content');
+    var $bar = $root.find('.article-progress span');
+    var $tocLinks = $root.find('.toc-list a');
+    var $headings = $content.find('h2[id]');
+
+    // Reading progress (0 → 1 across the article body) + active table-of-contents item
+    function onScroll() {
+      var top = $content.offset().top;
+      var height = $content.outerHeight();
+      var y = $win.scrollTop() + $win.height() * 0.35;
+      var progress = Math.min(Math.max((y - top) / height, 0), 1);
+      $bar.css('transform', 'scaleX(' + progress + ')');
+
+      var current = '';
+      $headings.each(function () {
+        if ($(this).offset().top <= $win.scrollTop() + 160) current = this.id;
+      });
+      $tocLinks.removeClass('is-active');
+      if (current) $tocLinks.filter('[href="#' + current + '"]').addClass('is-active');
+    }
+
+    onScroll();
+    $win.on('scroll resize', onScroll);
+
+    // Copy the article link
+    var $copy = $root.find('.article-copy');
+    var $note = $root.find('.article-copy-note');
+    var timer;
+
+    function done(ok) {
+      $copy.toggleClass('is-copied', ok);
+      $note.text(ok ? 'Đã sao chép liên kết' : 'Không thể sao chép');
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        $copy.removeClass('is-copied');
+        $note.text('');
+      }, 2000);
+    }
+
+    $copy.on('click', function () {
+      var url = window.location.href;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+        return;
+      }
+      var $tmp = $('<textarea readonly>').val(url).css({ position: 'fixed', top: '-1000px' }).appendTo('body');
+      $tmp[0].select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      $tmp.remove();
+      done(ok);
     });
   });
 })(jQuery);

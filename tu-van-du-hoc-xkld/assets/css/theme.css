@@ -464,10 +464,55 @@ body[data-aos-easing="site-ease"] [data-aos] {
   }
 }
 
+/* ===== shared/back-to-top ===== */
+.s-back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-white);
+  box-shadow: 0 10px 25px rgba(15, 42, 61, .15);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity .35s ease, visibility .35s ease, transform .35s var(--ease-out), border-color .3s ease;
+}
+
+.s-back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.s-back-to-top.is-visible:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+@media (min-width: 992px) {
+  .s-back-to-top { right: 24px; bottom: 24px; }
+}
+
 /* ===== shared/cta ===== */
 .s-cta {
   padding: 0;
   background-color: var(--color-bg-2);
+}
+
+/* After a lighter (--color-bg) section the colour change would sit right on the box's top edge */
+.s-programs + .s-cta,
+.s-news-list + .s-cta,
+.s-map + .s-cta {
+  padding-top: calc(var(--section-padding) / 2);
 }
 
 .s-cta .cta-box {
@@ -761,23 +806,6 @@ body[data-aos-easing="site-ease"] [data-aos] {
   color: var(--color-paragraph);
 }
 
-.s-footer .back-to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  background-color: var(--color-white);
-  transition: transform .3s ease, border-color .3s ease;
-}
-
-.s-footer .back-to-top:hover {
-  border-color: var(--color-primary);
-  transform: translateY(-4px);
-}
-
 @media (min-width: 768px) {
   .s-footer .footer-bottom {
     flex-direction: row;
@@ -811,6 +839,10 @@ body[data-aos-easing="site-ease"] [data-aos] {
   border-radius: 85px;
   background-color: rgba(211, 239, 231, 0);
   transition: background-color .4s ease, box-shadow .4s ease, backdrop-filter .4s ease;
+}
+
+.s-header.is-scrolled {
+  padding-top: 8px;
 }
 
 .s-header.is-scrolled .header-wrap {
@@ -975,6 +1007,7 @@ body[data-aos-easing="site-ease"] [data-aos] {
 
 @media (min-width: 992px) {
   .s-header { padding-top: 30px; }
+  .s-header.is-scrolled { padding-top: 12px; }
   .s-header .header-wrap { padding: 16px; }
   /* Menu centred on the screen, independent of logo / button widths */
   .s-header .nav-menu {
